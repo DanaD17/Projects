@@ -1,0 +1,149 @@
+.confirmation-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    background-color: rgba(35, 26, 18, 0.55);
+    backdrop-filter: blur(3px);
+
+    animation: overlayFadeIn 0.25s ease;
+}
+
+.confirmation-modal {
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+
+    padding: 30px 25px;
+    text-align: center;
+
+    background-color: #fffaf0;
+    border: 1px solid #a58a68;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+
+    animation: modalSlideIn 0.3s ease;
+
+    &__decoration {
+        margin-bottom: 10px;
+
+        color: #94704c;
+        font-size: 38px;
+        line-height: 1;
+    }
+
+    &__title {
+        margin: 0 0 12px;
+
+        color: #5b402a;
+        font-family: Georgia, serif;
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    &__message {
+        margin: 0 0 25px;
+
+        color: #796956;
+        font-size: 14px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    &__button {
+        flex: 1;
+        min-width: 0;
+        padding: 11px 12px;
+
+        border: 1px solid #79563a;
+        border-radius: 8px;
+
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+
+        transition:
+            background-color 0.2s ease,
+            color 0.2s ease,
+            transform 0.2s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+
+        &:focus-visible {
+            outline: 2px solid #a8794e;
+            outline-offset: 3px;
+        }
+
+        &.cancel {
+            color: #674b35;
+            background-color: #e9dfd1;
+
+            &:hover {
+                background-color: #ded0bd;
+            }
+        }
+
+        &.confirm {
+            color: #fffaf0;
+            background-color: #79563a;
+
+            &:hover {
+                background-color: #5b402a;
+            }
+        }
+    }
+}
+
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .confirmation-modal {
+        padding: 25px 18px;
+
+        &__title {
+            font-size: 22px;
+        }
+
+        &__actions {
+            gap: 8px;
+        }
+
+        &__button {
+            padding: 10px 8px;
+            font-size: 13px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+
+@import "./view-transitions.css";
+
+@import "tailwindcss";
+
+/* @import "react-icons/md"; */
+
+:root {
+  --olive-leaf: hsl(74, 32%, 32%);
+  --black-forest: #283618; 
+  --cornsilk: #fefae0;
+  --sunlit-clay: #dda15e;
+  --copperwood: #bc6c25;
+}
+

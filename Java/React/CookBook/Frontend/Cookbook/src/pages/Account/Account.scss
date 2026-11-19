@@ -1,0 +1,97 @@
+.cover {
+    .cookbook {
+        font-size: 16px;
+        right: -100px;
+        gap: 10px;
+    }
+
+    .logOut{
+        top:520px;
+        background: rgb(255, 205, 78);
+        color: #000;
+    }
+
+    .icon{
+        rotate: 180deg;
+    }
+
+    .p3-account {
+        width: 1160px;
+        height: 635px;
+        left: 20px;
+        top: 10px;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+
+        &__left-side {
+            border: none;
+        }
+
+        .recipe-list {
+            width: 100%;
+            overflow: auto;
+            height: 600px;
+            color: #806b58;
+            table {
+                width: 100%;
+                min-width: 1000px;
+                text-align: left;
+                border-collapse: collapse;
+                table-layout: auto;
+
+                th,
+                td {
+                    padding: 12px 16px;
+                    border-bottom: 1px solid #ddd;
+                    text-align: center;
+                }
+
+                th {
+                    background: linear-gradient(#fff, #772424 40%);
+                    color: white;
+                    padding: 12px 16px;
+                    white-space: nowrap;
+                }
+
+                tbody tr:hover {
+                    background-color: #faf3eb;
+                }
+            }
+
+            &__steps,
+            &__ingredients {
+                width: 250px;
+                height: 120px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px solid #d6c4b0;
+                border-radius: 6px;
+                background-color: #fffaf2;
+                text-align: center;
+
+                p {
+                    margin: 0 0 10px;
+                    line-height: 1.5;
+                    color: #806b58;
+                    overflow-wrap: break-word;
+                }
+
+                &::-webkit-scrollbar {
+                    width: 6px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: #c4a990;
+                    border-radius: 10px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
